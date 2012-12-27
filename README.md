@@ -1,0 +1,1 @@
+HTTP Server by default listening on port 9001, change "server.listen(9001);" to "server.listen(80);" in server.js to make him listen on port 80.

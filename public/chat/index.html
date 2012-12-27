@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<!-- 
+    
+  Project: view README.MD
+  Document: Build 17
+	
+  Chat created by Luis Gerhorst -  Website: http://luisgerhorts.de/ - Mail & Jabber: luis@luisgerhorst.de
+  Fork me on GitHub http://github.com/luisgerhorst/node-chat
+	
+-->
+
+  <title>Chat</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="de-de" />
+  <meta name='robots' content='noarchive, noindex, nofollow'>
+  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0;"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="stylesheet" type="text/css" href="/chat/css/animations.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="/chat/css/style.css" media="only screen and (min-device-width:480px)" />
+  <link rel="stylesheet" type="text/css" href="/chat/css/mobile.css" media="handheld, only screen and (max-device-width:480px)" />
+  
+  <script type="text/javascript" src="/chat/javascript/libraries/jquery.js"></script>
+  <script type="text/javascript" src="/chat/javascript/libraries/moment.js"></script>
+  <script type="text/javascript" src="/chat/javascript/libraries/socket.io.js"></script>
+  
+  <script type="text/javascript">
+  	  var socket = io.connect('http://' + document.domain +'/'),
+  	      userID = Math.round(Math.random() * 9999999999);
+  </script>
+  
+  <script type="text/javascript" src="/chat/javascript/load.js"></script>
+  <script type="text/javascript" src="/chat/javascript/send.js"></script>
+  <script type="text/javascript" src="/chat/javascript/javascript.js"></script>
+  
+
+</head>
+<body>
+
+<div id="full-page">
+
+<div id="wrapper">
+
+	<div id="right-wrap">
+
+		<ul id="users" class="area"></ul>
+	
+	</div> <!-- #right-wrap -->
+
+	<div id="left-wrap">
+		
+		<ol id="messages" class="area"></ol>
+
+		<form class="form area" id="new">
+
+			<input class="name show" id="new_name" name="name" placeholder="Name" autocomplete="off">
+
+			<input class="message" id="new_message" name="message" placeholder="Message" onKeyPress="return sendMessage(event)" autocomplete="off" >
+
+		</form> <!-- #new -->
+		
+	</div> <!-- #left-wrap -->
+
+</div> <!-- #wrapper -->
+
+</div> <!-- #full-page -->
+
+</body>
